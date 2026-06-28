@@ -1,0 +1,19 @@
+# Ambientes virtuais
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.swp
+
+# Antigravity/Gemini (evitar vazar contextos e dados locais)
+.gemini/
+conductor.md
