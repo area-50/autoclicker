@@ -17,3 +17,8 @@ __pycache__/
 # Antigravity/Gemini (evitar vazar contextos e dados locais)
 .gemini/
 conductor.md
+
+*.html
+main.spec
+build/
+dist/
