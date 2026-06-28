@@ -1,5 +1,6 @@
 import threading
 import time
+import webbrowser
 import customtkinter as ctk
 from pynput.mouse import Controller, Button
 from pynput.keyboard import Listener, Key
@@ -107,7 +108,12 @@ class App(ctk.CTk):
 
         # Informação de Status
         self.status_label = ctk.CTkLabel(self, text="Status: Parado (Pressione F8 para iniciar)", text_color="#7a8eb1", font=ctk.CTkFont(size=14, weight="bold"))
-        self.status_label.pack(pady=15)
+        self.status_label.pack(pady=(15, 5))
+
+        # Rodapé / Link
+        self.footer_link = ctk.CTkLabel(self, text="BS", text_color="#00e5ff", font=ctk.CTkFont(size=12, underline=True, weight="bold"), cursor="hand2")
+        self.footer_link.pack(side="bottom", pady=(0, 10))
+        self.footer_link.bind("<Button-1>", lambda e: webbrowser.open("https://www.brainstormtech.com.br"))
 
         # Lidar com o fechamento da janela
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
